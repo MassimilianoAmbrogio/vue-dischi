@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dischi</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    <!-- Inizio esercizio dischi -->
+
+    <div id="app">
+        <!-- Header e logo -->
+        <header class="app-header">
+            <img src="./img/logo.png" alt="Spotify-logo">
+        </header>
+         <!-- CDs -->
+        <div class="cds-container">
+            <!-- Filtri generi musicali -->
+            <div class="genre-filter">
+                Filter by genred
+                <select v-model="actualGenre"
+                    @change="filterGenre"
+                >
+                    <option value="all">All</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="metal">Metal</option>
+                    <option value="jazz">Jazz</option>
+                </select>
+            </div>
+            <!-- album -->
+            <ul class="cds-list" v-if="cds.length > 0">
+                <li class="cd" v-for="cd in cds">
+                    <div class="wrap-image">
+                        <img :src="cd.poster" :alt="cd.title">
+                    </div>
+                    <h3 class="title">{{cd.title}}</h3>
+                    <div class="author">{{cd.author}}</div>
+                    <div class="year">{{cd.year}}</div>
+                    <div class="genre">{{cd.genre}}</div>
+                </li>
+            </ul>
+            <h2 v-else class="loader">Loading albums, please wait...</h2>
+        </div>
+    </div>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+
+    <!-- Fine esercizio dischi -->
+    
+</body>
+</html>

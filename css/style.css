@@ -1,0 +1,74 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    background: #1a2e3c;
+}
+
+img {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+/* HEADER */
+.app-header {
+    padding: 10px 10px 5px;
+    background: #2b3b47;
+}
+
+.app-header img {
+    max-height: 50px;
+}
+
+/* CDS LIST */
+.cds-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 10px;
+    list-style: none;
+}
+
+.cd {
+    flex-basis: 200px;
+    margin: 10px 20px;
+    padding: 20px;
+    text-align: center;
+    background: #2b3b47;
+}
+
+.wrap-image {
+    min-height: 170px;
+}
+
+.cd .title {
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.cd .author, 
+.cd .year {
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.cd .author {
+    font-size: 20px;
+}
+
+/* FILTER */
+.genre-filter {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.genre-filter select {
+    margin-left: 10px;
+}

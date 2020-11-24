@@ -13,7 +13,6 @@ body {
 
 img {
     max-width: 100%;
-    cursor: pointer;
 }
 
 /* HEADER */
@@ -24,6 +23,7 @@ img {
 
 .app-header img {
     max-height: 50px;
+    cursor: pointer;
 }
 
 /* CDS LIST */

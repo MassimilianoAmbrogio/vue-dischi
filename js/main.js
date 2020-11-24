@@ -19,7 +19,7 @@ const app = new Vue({
     },
     created() {
         /**
-         * Get all albums, filters
+         * Get all albums
          */
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then(result => {
@@ -32,6 +32,7 @@ const app = new Vue({
             });
     },
     methods: {
+        // filters
         filterGenred() {
             axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then(result => {

@@ -32,13 +32,13 @@ const app = new Vue({
             });
     },
     methods: {
-        filterGenre() {
+        filterGenred() {
             axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then(result => {
                 let cdsList = result.data.response;
 
                 if (this.actualGenre !== 'all') {
-                    cdsList = cdsList.filter(cd => cd.genre.tolowerCase() === this.actualGenre);
+                    cdsList = cdsList.filter(cd => cd.genre.toLowerCase() === this.actualGenre);
                 }
 
                 this.cds = cdsList;
